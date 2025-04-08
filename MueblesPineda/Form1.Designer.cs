@@ -31,7 +31,6 @@
 			btnEnviar = new Button();
 			txtMensaje = new TextBox();
 			lstMensajes = new ListBox();
-			button1 = new Button();
 			SuspendLayout();
 			// 
 			// btnEnviar
@@ -59,14 +58,12 @@
 			lstMensajes.Name = "lstMensajes";
 			lstMensajes.Size = new Size(120, 94);
 			lstMensajes.TabIndex = 2;
-
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
 			ClientSize = new Size(800, 450);
-			Controls.Add(button1);
 			Controls.Add(lstMensajes);
 			Controls.Add(txtMensaje);
 			Controls.Add(btnEnviar);
@@ -81,6 +78,5 @@
 		private Button btnEnviar;
 		private TextBox txtMensaje;
 		private ListBox lstMensajes;
-		private Button button1;
 	}
 }

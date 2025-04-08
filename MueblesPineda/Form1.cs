@@ -40,7 +40,7 @@ namespace MueblesPineda
 								 basicProperties: null,
 								 body: body);
 
-			
+
 		}
 		private void RecibirMensajes()
 		{
