@@ -1,4 +1,4 @@
-﻿namespace MueblesPineda
+namespace MueblesPineda
 {
 	partial class Form1
 	{
@@ -35,28 +35,28 @@
 			// 
 			// btnEnviar
 			// 
-			btnEnviar.Location = new Point(253, 115);
+			btnEnviar.Location = new Point(478, 308);
 			btnEnviar.Name = "btnEnviar";
-			btnEnviar.Size = new Size(75, 23);
+			btnEnviar.Size = new Size(86, 23);
 			btnEnviar.TabIndex = 0;
-			btnEnviar.Text = "button1";
+			btnEnviar.Text = "Enviar";
 			btnEnviar.UseVisualStyleBackColor = true;
 			btnEnviar.Click += btnEnviar_Click;
 			// 
 			// txtMensaje
 			// 
-			txtMensaje.Location = new Point(147, 116);
+			txtMensaje.Location = new Point(177, 308);
 			txtMensaje.Name = "txtMensaje";
-			txtMensaje.Size = new Size(100, 23);
+			txtMensaje.Size = new Size(295, 23);
 			txtMensaje.TabIndex = 1;
 			// 
 			// lstMensajes
 			// 
 			lstMensajes.FormattingEnabled = true;
 			lstMensajes.ItemHeight = 15;
-			lstMensajes.Location = new Point(147, 188);
+			lstMensajes.Location = new Point(177, 95);
 			lstMensajes.Name = "lstMensajes";
-			lstMensajes.Size = new Size(120, 94);
+			lstMensajes.Size = new Size(387, 169);
 			lstMensajes.TabIndex = 2;
 			// 
 			// Form1
@@ -68,7 +68,7 @@
 			Controls.Add(txtMensaje);
 			Controls.Add(btnEnviar);
 			Name = "Form1";
-			Text = "Form1";
+			Text = "Muebles Pineda";
 			ResumeLayout(false);
 			PerformLayout();
 		}
