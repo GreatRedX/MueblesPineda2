@@ -81,6 +81,7 @@
 			Controls.Add(lstMensajes);
 			Controls.Add(txtMensaje);
 			Controls.Add(btnEnviar);
+			MaximizeBox = false;
 			Name = "Form1";
 			Text = "Muebles Pineda";
 			ResumeLayout(false);
