@@ -43,7 +43,7 @@
             if (texto) {
                 const div = document.createElement("div");
                 div.textContent = texto;
-                div.innerHTML = <strong>Carpintero:</strong> ${texto};
+                div.innerHTML = `<strong>Carpintero:</strong> ${texto}`;
                 div.classList.add("mensaje");
                 div.classList.add("carpintero");
                 document.getElementById("chat-box").appendChild(div);
