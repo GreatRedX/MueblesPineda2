@@ -78,12 +78,6 @@ namespace MueblesPineda
 
 
 		}
-		private void button1_Click(object sender, EventArgs e)
-		{
 
-			Form2 formularioSecundario = new Form2();
-			formularioSecundario.Show();
-
-		}
 	}
 }

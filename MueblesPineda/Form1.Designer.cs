@@ -59,16 +59,7 @@
 			lstMensajes.Name = "lstMensajes";
 			lstMensajes.Size = new Size(120, 94);
 			lstMensajes.TabIndex = 2;
-			// 
-			// button1
-			// 
-			button1.Location = new Point(534, 357);
-			button1.Name = "button1";
-			button1.Size = new Size(111, 12);
-			button1.TabIndex = 3;
-			button1.Text = "button1";
-			button1.UseVisualStyleBackColor = true;
-			button1.Click += button1_Click;
+
 			// 
 			// Form1
 			// 
