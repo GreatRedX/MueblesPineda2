@@ -1,0 +1,157 @@
+/* Fuente y base general */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('img/fondo-madera.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #3e2f1c;
+}
+
+/* Tipografía general */
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0.5em;
+}
+
+a {
+    color: #8b0000;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Encabezado */
+.encabezado {
+    background-color: rgba(255, 255, 255, 0.88);
+    text-align: center;
+    padding: 25px;
+    border-bottom: 3px solid #b5651d;
+}
+
+.encabezado h1 {
+    font-size: 2.6em;
+    color: #4e342e;
+}
+
+.encabezado p {
+    font-size: 1.2em;
+    color: #6d4c41;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    margin: 25px auto;
+    max-width: 900px;
+    border-radius: 14px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Carrusel */
+.carousel-wrapper {
+    margin: 40px auto;
+    max-width: 700px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    background-color: white;
+}
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* Flechas */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    background-color: rgba(255, 255, 255, 0.7);
+    color: #4e342e;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.arrow:hover {
+    background-color: rgba(255, 255, 255, 0.95);
+}
+
+.arrow.left {
+    left: 10px;
+}
+
+.arrow.right {
+    right: 10px;
+}
+
+/* Burbuja de chat */
+#chat-bubble {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #a93439;
+    color: white;
+    font-size: 24px;
+    padding: 16px;
+    border-radius: 50%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    z-index: 999;
+    transition: transform 0.3s ease;
+}
+
+#chat-bubble:hover {
+    transform: scale(1.1);
+}
+
+/* Pie de página */
+.pie {
+    background-color: rgba(255, 255, 255, 0.95);
+    text-align: center;
+    padding: 30px;
+    font-size: 0.95em;
+    color: #5d4037;
+    border-top: 3px solid #b5651d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .carousel-images img {
+        height: 300px;
+    }
+
+    .encabezado h1 {
+        font-size: 2em;
+    }
+
+    .contenido-principal {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .carousel-wrapper {
+        max-width: 95%;
+    }
+}

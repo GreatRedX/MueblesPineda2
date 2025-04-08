@@ -1,58 +1,56 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Interfaz Web</title>
-    <style>
-        body {
-            font-family: Arial;
-            padding: 20px;
-        }
-
-        #mensajes {
-            border: 1px solid #ccc;
-            padding: 10px;
-            height: 200px;
-            overflow-y: auto;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muebles Pineda</title>
+  <link rel="stylesheet" href="Styles/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
 
-    <h2>Muebles Pineda</h2>
+  <header class="encabezado">
+    <h1>Bienvenido a Muebles Pineda</h1>
+    <p>Fabricamos cocinas, closets, puertas, muebles de baño y mucho más.</p>
+  </header>
 
-    <input type="text" id="mensaje" placeholder="Mensaje">
-    <button onclick="enviarMensaje()">Enviar</button>
+  <main class="contenido-principal">
+    <p>Descubre nuestros trabajos recientes y chatea con nosotros si deseas una cotización.</p>
+  </main>
 
-    <h3>Mensajes recibidos:</h3>
-    <div id="mensajes"></div>
+  <!-- Carrusel de imágenes -->
+  <div class="carousel-wrapper">
+    <div class="carousel-container">
+      <div class="carousel-images" id="carouselImages">
+        <img src="img/trabajo1.jpg" alt="Trabajo 1" />
+        <img src="img/trabajo2.jpg" alt="Trabajo 2" />
+        <img src="img/trabajo3.jpg" alt="Trabajo 3" />
+        <img src="img/trabajo4.jpg" alt="Trabajo 4" />
+        <img src="img/trabajo5.jpg" alt="Trabajo 5" />
+        <img src="img/trabajo6.jpg" alt="Trabajo 6" />
+        <img src="img/trabajo7.jpg" alt="Trabajo 7" />
+        <img src="img/trabajo8.jpg" alt="Trabajo 8" />
+        <img src="img/trabajo9.jpg" alt="Trabajo 9" />
+        <img src="img/trabajo10.jpg" alt="Trabajo 10" />
+      </div>
+      <!-- Flechas -->
+      <div class="arrow left" onclick="moveSlide(-1)">&#10094;</div>
+      <div class="arrow right" onclick="moveSlide(1)">&#10095;</div>
+    </div>
+  </div>
 
-    <script>
-        async function enviarMensaje() {
-            const mensaje = document.getElementById("mensaje").value;
-            if (!mensaje.trim()) return;
+  <!-- Burbuja de chat -->
+  <div id="chat-bubble" onclick="openChat()" title="Chatea con nosotros">
+    💬
+  </div>
 
-            await fetch("/api/message/to-app", {
-                method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(mensaje)
-            });
+  <footer class="pie">
+    <p><strong>Contacto:</strong></p>
+    <p>Teléfonos: 3125521093, 3155735363</p>
+    <p>Correo: <a href="mailto:Mueblespineda369@gmail.com">Mueblespineda369@gmail.com</a></p>
+    <p>Dirección: Cra 10 #5-16 Olaya</p>
+  </footer>
 
-            document.getElementById("mensaje").value = "";
-        }
-
-        async function recibirMensaje() {
-            const res = await fetch("/api/message/from-app");
-            const texto = await res.text();
-            if (texto) {
-                const div = document.createElement("div");
-                div.textContent = texto;
-                document.getElementById("mensajes").appendChild(div);
-            }
-        }
-
-        setInterval(recibirMensaje, 2000);
-    </script>
-
+  <script src="js/script.js"></script>
 </body>
 </html>

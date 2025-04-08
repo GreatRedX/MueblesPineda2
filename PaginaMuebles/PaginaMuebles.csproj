@@ -12,4 +12,19 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include="wwwroot\img\trabajo1.jpg" />
+    <None Include="wwwroot\img\trabajo10.jpg" />
+    <None Include="wwwroot\img\trabajo2.jpg" />
+    <None Include="wwwroot\img\trabajo3.jpg" />
+    <None Include="wwwroot\img\trabajo4.jpg" />
+    <None Include="wwwroot\img\trabajo5.jpg" />
+    <None Include="wwwroot\img\trabajo6.jpg" />
+    <None Include="wwwroot\img\trabajo7.jpg" />
+    <None Include="wwwroot\img\trabajo8.jpg" />
+    <None Include="wwwroot\img\trabajo9.jpg" />
+    <None Include="wwwroot\js\script.js" />
+    <None Include="wwwroot\Styles\styles.css" />
+  </ItemGroup>
+
 </Project>
