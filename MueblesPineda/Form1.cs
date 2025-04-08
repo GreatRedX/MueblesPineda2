@@ -35,6 +35,7 @@ namespace MueblesPineda
 			string message = txtMensaje.Text;
 			var body = Encoding.UTF8.GetBytes(message);
 
+			Invoke((MethodInvoker)(() => lstMensajes.Items.Add($"Tú: {message}")));
 			channel.BasicPublish(exchange: "",
 								 routingKey: "mi-cola",
 								 basicProperties: null,
