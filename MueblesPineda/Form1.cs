@@ -39,8 +39,7 @@ namespace MueblesPineda
 								 routingKey: "mi-cola",
 								 basicProperties: null,
 								 body: body);
-
-
+			txtMensaje.Clear();
 		}
 		private void RecibirMensajes()
 		{
@@ -66,7 +65,8 @@ namespace MueblesPineda
 				var body = ea.Body.ToArray();
 				var message = Encoding.UTF8.GetString(body);
 
-				Invoke((MethodInvoker)(() => lstMensajes.Items.Add(message)));
+				Invoke((MethodInvoker)(() => lstMensajes.Items.Add($"Cliente: {message}")));
+
 			};
 
 			channel.BasicConsume(queue: "mi-cola2",
@@ -74,9 +74,6 @@ namespace MueblesPineda
 								 consumer: consumer);
 
 			while (true) { } // Mantiene la escucha activa
-
-
-
 		}
 
 	}

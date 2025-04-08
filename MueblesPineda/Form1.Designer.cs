@@ -1,4 +1,4 @@
-namespace MueblesPineda
+﻿namespace MueblesPineda
 {
 	partial class Form1
 	{
@@ -31,11 +31,12 @@ namespace MueblesPineda
 			btnEnviar = new Button();
 			txtMensaje = new TextBox();
 			lstMensajes = new ListBox();
+			label1 = new Label();
 			SuspendLayout();
 			// 
 			// btnEnviar
 			// 
-			btnEnviar.Location = new Point(478, 308);
+			btnEnviar.Location = new Point(505, 363);
 			btnEnviar.Name = "btnEnviar";
 			btnEnviar.Size = new Size(86, 23);
 			btnEnviar.TabIndex = 0;
@@ -45,25 +46,38 @@ namespace MueblesPineda
 			// 
 			// txtMensaje
 			// 
-			txtMensaje.Location = new Point(177, 308);
+			txtMensaje.Location = new Point(124, 364);
 			txtMensaje.Name = "txtMensaje";
-			txtMensaje.Size = new Size(295, 23);
+			txtMensaje.PlaceholderText = "Mensaje";
+			txtMensaje.Size = new Size(375, 23);
 			txtMensaje.TabIndex = 1;
 			// 
 			// lstMensajes
 			// 
 			lstMensajes.FormattingEnabled = true;
 			lstMensajes.ItemHeight = 15;
-			lstMensajes.Location = new Point(177, 95);
+			lstMensajes.Location = new Point(124, 87);
 			lstMensajes.Name = "lstMensajes";
-			lstMensajes.Size = new Size(387, 169);
+			lstMensajes.Size = new Size(467, 244);
 			lstMensajes.TabIndex = 2;
+			// 
+			// label1
+			// 
+			label1.AutoSize = true;
+			label1.Font = new Font("Segoe UI", 15F, FontStyle.Regular, GraphicsUnit.Point);
+			label1.Location = new Point(49, 30);
+			label1.MaximumSize = new Size(200, 100);
+			label1.Name = "label1";
+			label1.Size = new Size(186, 28);
+			label1.TabIndex = 3;
+			label1.Text = "💬 Chat con Cliente";
 			// 
 			// Form1
 			// 
 			AutoScaleDimensions = new SizeF(7F, 15F);
 			AutoScaleMode = AutoScaleMode.Font;
-			ClientSize = new Size(800, 450);
+			ClientSize = new Size(713, 450);
+			Controls.Add(label1);
 			Controls.Add(lstMensajes);
 			Controls.Add(txtMensaje);
 			Controls.Add(btnEnviar);
@@ -78,5 +92,6 @@ namespace MueblesPineda
 		private Button btnEnviar;
 		private TextBox txtMensaje;
 		private ListBox lstMensajes;
+		private Label label1;
 	}
 }
