@@ -28,6 +28,12 @@
             const mensaje = document.getElementById("chat-input").value;
             if (!mensaje.trim()) return;
 
+            const div = document.createElement("div");
+            div.innerHTML = `<strong>Tú:</strong> ${mensaje}`;
+            div.classList.add("mensaje"); 
+            div.classList.add("cliente");
+            document.getElementById("chat-box").appendChild(div);
+
             await fetch("/api/message/to-app", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

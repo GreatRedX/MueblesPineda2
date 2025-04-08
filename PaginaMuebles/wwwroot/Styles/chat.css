@@ -43,11 +43,20 @@ body {
   }
   
   .carpintero {
-    background-color: #ffe0b2;
+    background-color: #ffe0b8;
     color: #5d4037;
     align-self: flex-start;
-  }
-  
+  } 
+
+   .mensaje.cliente {
+    background-color: #e1f5fe;
+    color: #01579b;
+    align-self: flex-end;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 5px;
+    max-width: 70%;
+   }
   .nombre {
     font-weight: bold;
   }
