@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat con Muebles Pineda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Styles/chat.css"/>
+</head>
+<body>
+
+    <div class="chat-container">
+        <h2 class="titulo">💬 Chat con Muebles Pineda</h2>
+
+        <div id="chat-box" class="chat-box sombra">
+            <div class="mensaje carpintero">
+                <span class="nombre">Carpintero</span>: ¡Hola! ¿En qué podemos ayudarte?
+            </div>
+        </div>
+
+        <div class="input-contenedor">
+            <input type="text" id="chat-input" placeholder="Escribe tu mensaje..." />
+            <button onclick="enviarMensaje()">Enviar</button>
+        </div>
+    </div>
+    <script>
+        async function enviarMensaje() {
+            const mensaje = document.getElementById("chat-input").value;
+            if (!mensaje.trim()) return;
+
+            await fetch("/api/message/to-app", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(mensaje)
+            });
+
+            document.getElementById("chat-input").value = "";
+        }
+
+        async function recibirMensaje() {
+            const res = await fetch("/api/message/from-app");
+            const texto = await res.text();
+            if (texto) {
+                const div = document.createElement("div");
+                div.textContent = texto;
+                document.getElementById("chat-box").appendChild(div);
+            }
+        }
+
+        setInterval(recibirMensaje, 2000);
+    </script>
+</body>
+</html>
